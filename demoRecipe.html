@@ -1,0 +1,41 @@
+<html>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous">
+
+</script>
+
+</script>
+<script>
+const recipeBook = 
+{"recipe" :
+  [
+   {
+    "name": "Aaron's Jalapeno Sauce",
+    "type": "condiment",
+    "ingred":"20 Fresh Jalapeno Peppers <br> 1 1/2 cups vinegar <br> 1/2 teaspoon salt <br> 3 teaspoon minced fresh Garlic",
+    "servings":" ",
+    "prep": "20 mins",
+    "cook":"Place All in sauce pan, bring to boil, then simmer for 10 minutes or until Peppers are soft, place in blender and blend to puree, keep in closed container and refidgerated until use. "
+  }
+    ]};
+
+$(document).ready(function() {
+
+      $('#clikky').click(function() {
+
+         $('#append').html('')
+
+         $('#append').append(recipeBook.recipe[0].name);
+
+        ;
+       });
+});
+</script>
+
+  <button id='clikky'>click me</button>
+
+  <div id="append"></div>
+</html>
