@@ -26,7 +26,35 @@ const recipeBook =
      "Prep": "40 mins",
      "Steps": "add all ingredients into a medium bowl, mix thouroughly, cover and chill dough in the refrigerator for 30 minutes, Remove dough from refrigerator and hand roll into balls about 1 inch in diameter."
   } 
-     ]}
+     ]};
+
+
+     var agents = ["aaron","ben","sandy"];
+
+
+
+
+
+$(document).ready(function() {
+
+        for(let i = 0; i < agents.length; i++) {
+
+          $('#' + agents[i]).click(function() {
+            $('#append').append(agents[i]);
+
+
+          });
+        };
+});
+
+
+
+
+
+
+
+
+
 
 $(document).ready(function() {
 
@@ -45,9 +73,8 @@ $(document).ready(function() {
 
 <button id='energyballs'>Energyballs</button>
 
-
-
-
+<button id='agent'>aaron</button>
+<button id='agent3'>sandy</button>
 
   <div id="append"></div>
 
