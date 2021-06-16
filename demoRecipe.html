@@ -40,16 +40,24 @@ $(document).ready(function() {
        });
 });
 
+$(document).ready(function() {
+
+      $('#energyCookies').click(function() {
+
+         $('#append').html('')
+
+         $('#append').append(recipeBook.recipe[1].Name);
+
+        ;
+       });
+});
 
 
 
 </script>
+<button id='jalapeno'>Jalapeno</button>
 
-  <button id='jalapeno'>Jalapeno</button>
-
-<button id='energyballs'>Energyballs</button>
-
-
+<button id='energyCookies'>Energy Cookies</button>
 
 
 
