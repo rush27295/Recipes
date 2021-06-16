@@ -38,7 +38,15 @@ $(document).ready(function() {
          $('#buttonLoader').append("<button id = " + recipeBook.recipe[i].Name + '">' + recipeBook.recipe[i].Name + "</button>"  );
 
         
-        };
+         $('#'+recipeBook.recipe[i].Name).click(function() {
+          console.log(this.id);
+      
+         $('#append').html('')
+
+         $('#append').append(recipeBook.recipe[i].Name); 
+
+        });
+       };
 });
 
 
