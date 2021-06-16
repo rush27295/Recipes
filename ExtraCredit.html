@@ -31,17 +31,35 @@ const recipeBook =
   } 
      ]}
 
+//$(document).ready(function() {
+
+  // $('#jalapeno').click(function() {
+
+     //    $('#append').html('')
+//
+    //     $('#append').append(recipeBook.recipe[0].Name);
+//
+      //  ;
+      // });
+//});
+
+
 $(document).ready(function() {
 
-      $('#jalapeno').click(function() {
-
+ for(let i = 0; i < recipeIds.length; i++) {
+      $('#'+recipeIds[i]).click(function() {
+      
          $('#append').html('')
 
-         $('#append').append(recipeBook.recipe[0].Name);
+         $('#append').append(recipeBook.recipe[i].Name);
 
         ;
        });
+    }
 });
+
+
+
 </script>
 
   <button id='jalapeno'>Jalapeno</button>
