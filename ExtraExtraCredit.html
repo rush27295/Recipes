@@ -7,8 +7,6 @@
 
 </script>
 <script>
-let receipeIds = ["jalapeno","energyballs"];
-
 
 const recipeBook = 
 {"recipe" :
@@ -35,25 +33,37 @@ const recipeBook =
 
 $(document).ready(function() {
 
- for(let i = 0; i < receipeIds .length; i++) {
-      $('#'+receipeIds[i]).click(function() {
-      
-         $('#append').html('')
+ for(let i = 0; i < receipeBook.recipe.length; i++) {
+     
+         $('#buttonLoader').append("<button id = " + recipeBook.recipe[i].Name + '">' + recipeBook.recipe[i].Name + "</button>"  );
 
-         $('#append').append(recipeBook.recipe[i].Name);
-
-        ;
-       });
-    }
+        
+        };
 });
+
+
+
+
+// $(document).ready(function() {
+
+//  for(let i = 0; i < receipeBook.recipe.length; i++) {
+//       $('#'+receipeIds[i]).click(function() {
+      
+//          $('#append').html('')
+
+//          $('#append').append(recipeBook.recipe[i].Name);
+
+//         ;
+//        });
+//     }
+// });
 
 
 
 </script>
 
-  <button id='jalapeno'>Jalapeno</button>
+<div id ="buttonLoader"> </div>
 
-<button id='energyballs'>Energyballs</button>
 
 
 
