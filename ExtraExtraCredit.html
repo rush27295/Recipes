@@ -8,6 +8,8 @@
 </script>
 <script>
 
+let recipeIds =[];
+
 const recipeBook = 
 {"recipe" :
   [
@@ -35,19 +37,24 @@ $(document).ready(function() {
 
  for(let i = 0; i < recipeBook.recipe.length; i++) {
      
-         $('#buttonLoader').append("<button id = " + recipeBook.recipe[i].Name + '">' + recipeBook.recipe[i].Name + "</button>"  );
+          recipeIds.push(recipeBook.recipe[i].Name.replace(/\s/g, ''));
 
-        
-         $('#'+recipeBook.recipe[i].Name).click(function() {
-          console.log(this.id);
+         $('#buttonLoader').append("<button id = " + recipeIds[i] + '>' + recipeBook.recipe[i].Name + "</button>"  );
+
+          $('#'+ recipeIds[i]).click(function() {
+          
       
-         $('#append').html('')
+           $('#append').html('')
 
-         $('#append').append(recipeBook.recipe[i].Name); 
+          $('#append').append(recipeBook.recipe[i].Name); 
+          });
 
-        });
+
+
        };
 });
+
+
 
 
 
@@ -65,5 +72,9 @@ $(document).ready(function() {
 
 
 <div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </html>
